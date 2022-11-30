@@ -1,4 +1,4 @@
-PKG=gurls
+PKG=gearchat
 
 all: build fmt
 
