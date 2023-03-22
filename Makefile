@@ -27,7 +27,7 @@ build:
 	node esbuild.config.mjs
 
 repl:
-	deno repl --eval-file=script/repl.ts
+	deno repl -A --eval-file=script/repl.ts
 
 fmt:
 	deno fmt --ignore=node_modules,target,dist

@@ -10,8 +10,8 @@ import {
   getWasmMetadata,
 } from "https://github.com/btwiuse/gear-js/raw/deno/api/index.ts";
 import { config } from "https://deno.land/x/dotenv/mod.ts";
-import { meta } from "https://unpkg.com/gearchat/dist/mod.ts";
-import deploy from "https://unpkg.com/gearchat/dist/deploy.json" assert {
+import { meta } from "../dist/mod.ts";
+import deploy from "../dist/deploy.json" assert {
   type: "json",
 };
 
@@ -144,6 +144,7 @@ async function addMsg(m: string) {
 }
 
 async function main() {
+  console.log({ groupchat });
   subscribeTo("MessageEnqueued", refresh);
   refresh();
   const stdin = await Deno.open("/dev/stdin");
